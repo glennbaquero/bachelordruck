@@ -1,0 +1,18 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Contracts\FieldEnumContract;
+use App\Traits\WithFieldLabels;
+
+enum {{ class }} : string implements FieldEnumContract
+{
+    use WithFieldLabels;
+
+    {{ fieldDefinition }}
+
+    public function payload(): array
+    {
+        return [];
+    }
+}

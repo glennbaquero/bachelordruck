@@ -1,0 +1,102 @@
+{
+    "reference": {
+        "item": [
+            {
+                "@key": "124 Spider",
+                "@url": "https://services.mobile.de/refdata/classes/Car/makes/ABARTH/models/124 Spider",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "124 Spider"
+                }
+            },
+            {
+                "@key": "500",
+                "@url": "https://services.mobile.de/refdata/classes/Car/makes/ABARTH/models/500",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "500"
+                }
+            },
+            {
+                "@key": "500C",
+                "@url": "https://services.mobile.de/refdata/classes/Car/makes/ABARTH/models/500C",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "500C"
+                }
+            },
+            {
+                "@key": "595",
+                "@url": "https://services.mobile.de/refdata/classes/Car/makes/ABARTH/models/595",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "595"
+                }
+            },
+            {
+                "@key": "595 Competizione",
+                "@url": "https://services.mobile.de/refdata/classes/Car/makes/ABARTH/models/595 Competizione",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "595 Competizione"
+                }
+            },
+            {
+                "@key": "595 Turismo",
+                "@url": "https://services.mobile.de/refdata/classes/Car/makes/ABARTH/models/595 Turismo",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "595 Turismo"
+                }
+            },
+            {
+                "@key": "595C",
+                "@url": "https://services.mobile.de/refdata/classes/Car/makes/ABARTH/models/595C",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "595C"
+                }
+            },
+            {
+                "@key": "695",
+                "@url": "https://services.mobile.de/refdata/classes/Car/makes/ABARTH/models/695",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "695"
+                }
+            },
+            {
+                "@key": "695C",
+                "@url": "https://services.mobile.de/refdata/classes/Car/makes/ABARTH/models/695C",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "695C"
+                }
+            },
+            {
+                "@key": "Grande Punto",
+                "@url": "https://services.mobile.de/refdata/classes/Car/makes/ABARTH/models/Grande Punto",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "Grande Punto"
+                }
+            },
+            {
+                "@key": "Punto Evo",
+                "@url": "https://services.mobile.de/refdata/classes/Car/makes/ABARTH/models/Punto Evo",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "Punto Evo"
+                }
+            },
+            {
+                "@key": "ANDERE",
+                "@url": "https://services.mobile.de/refdata/classes/Car/makes/ABARTH/models/ANDERE",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "Andere"
+                }
+            }
+        ]
+    }
+}

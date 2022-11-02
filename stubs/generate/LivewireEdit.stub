@@ -1,0 +1,51 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Livewire\Base\Form;
+use Domain\{{ domain }}\Actions\{{ model }}DeleteAction;
+use Domain\{{ domain }}\Actions\{{ model }}UpdateAction;
+use Domain\{{ domain }}\DataTransferObjects\{{ model }}Data;
+use Domain\{{ domain }}\FieldEnums\{{ model }}FieldEnum;
+use Domain\{{ domain }}\FormGrids\{{ model }}FormGrid;
+use Domain\{{ domain }}\Models\{{ model }};
+use Domain\{{ domain }}\Rules\{{ model }}Rules;
+use Livewire\Redirector;
+
+class {{ class }} extends Form
+{
+    public string   $name = '{{ modelLowercase }}';
+    public {{ model }}     ${{ modelLowercase }};
+
+    public function mount({{ model }} $model) : void {
+        $this->{{ modelLowercase }} = $model;
+    }
+
+    public function grids(): array
+    {
+        return app({{ model }}FormGrid::class)();
+    }
+
+    public function rules(): array
+    {
+        return {{ model }}Rules::getRules($this->{{ modelLowercase }});
+    }
+
+    public function update({{ model }}UpdateAction ${{ modelLowercase }}UpdateAction) : Redirector {
+        $this->validate();
+        ${{ modelLowercase }}Data = {{ model }}Data::fromModel($this->{{ modelLowercase }});
+        $this->{{ modelLowercase }} = ${{ modelLowercase }}UpdateAction($this->{{ modelLowercase }}, ${{ modelLowercase }}Data);
+        session()->flash('message', __('notification.update_message', ['model' => __('model.'.$this->name)]));
+        return redirect()->to(route('{{ modelLowercase }}.list'));
+    }
+
+    public function delete({{ model }}DeleteAction ${{ modelLowercase }}DeleteAction) : Redirector {
+        ${{ modelLowercase }}DeleteAction($this->{{ modelLowercase }});
+        session()->flash('message', __('notification.delete_message', ['model' => __('model.'.$this->name)]));
+        return redirect()->to(route('{{ modelLowercase }}.list'));
+    }
+
+    protected function validationAttributes() : array {
+        return {{ model }}FieldEnum::labels();
+    }
+}

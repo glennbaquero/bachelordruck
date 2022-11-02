@@ -1,0 +1,59 @@
+<?php
+
+namespace {{ namespace }};
+
+
+use App\Livewire\Base\DataTable;
+use App\Livewire\View\Column;
+use Domain\{{ model }}s\Actions\{{ model }}DeleteAction;
+use Domain\{{ model }}s\Models\{{ model }};
+use Illuminate\Database\Eloquent\Builder;
+
+class {{ class }} extends DataTable
+{
+
+    public function mount() : void {
+        $this->searchPlaceholder = __('placeholder.search',['model' => __('model.{{ modelLowercase }}s')]);
+        $this->createButtonTitle = __('button.create',['model' => __('model.{{ modelLowercase }}')]);
+        $this->createRoute = route('{{ modelLowercase }}.create');
+    }
+
+    public function columns(): array
+    {
+        return [
+            Column::action(
+                action: 'show'
+            )->setCallback(
+                fn($id) => redirect(sprintf("/{{ modelLowercase }}s/%s", $id))
+            ),
+            {{ columnsDefinition }}
+            Column::action(
+                action: 'edit'
+            )->setCallback(
+                fn($id) => redirect(sprintf("/{{ modelLowercase }}s/%s/edit", $id))
+            ),
+            Column::action(
+                action: 'delete'
+            )->setCallback(
+                function ($id) {
+                    $this->currentId = $id;
+                    $this->showModalConfirmation = true;
+                }
+            )
+        ];
+    }
+
+    public function query(): Builder
+    {
+        return {{ model }}::query();
+    }
+
+    public function delete({{ model }}DeleteAction ${{ modelLowercase }}DeleteAction, {{ model }} ${{ modelLowercase }}) : void {
+        if (${{ modelLowercase }}->id === null) {
+            ${{ modelLowercase }} = {{ model }}::findOrFail($this->currentId);
+        }
+
+        ${{ modelLowercase }}DeleteAction(${{ modelLowercase }});
+        $this->showModalConfirmation = false;
+    }
+}

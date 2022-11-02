@@ -1,0 +1,20 @@
+<?php
+
+namespace {{ namespace }};
+
+use Domain\{{ domain }}\Models\{{ model }};
+use Spatie\DataTransferObject\DataTransferObject;
+
+class {{ class }} extends DataTransferObject
+{
+    {{ fieldDefinition }}
+
+    public function __construct(...$args) { parent::__construct($args); }
+
+    public static function fromModel({{ model }} ${{ modelLowercase }}) :{{ class }}
+        {
+            return new self(
+                {{ fieldMapping }}
+            );
+        }
+}

@@ -1,0 +1,34 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class {{ class }} extends Model
+{
+    use HasFactory;
+
+    protected $fillable = {{ fillableCode }};
+
+    protected $casts = {{ castsCode }};
+
+    public function scopeSearch(Builder $query, string $searchTerm) : Builder {
+        if (empty($searchTerm)) {
+            return $query;
+        }
+        return $query->where('{{ labelField }}', 'LIKE', '%'.$searchTerm.'%');
+//                     ->orWhere('xyz', 'LIKE', '%'.$searchTerm.'%')
+    }
+
+    public function getLabelAttribute() : string {
+        return $this->{{ labelField }} ?? '';
+    }
+
+    public function toArray() : array {
+        $array = parent::toArray();
+        $array['label'] = $this->label;
+        return $array;
+    }
+}

@@ -1,0 +1,21 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Livewire\View\Fieldset;
+use Support\Creators\OutputFieldCreator;
+
+
+class {{ class }}
+{
+    private string $modelName = '{{ modelLowercase }}';
+
+    public function __invoke() : array {
+            $fieldCreator = new OutputFieldCreator($this->modelName);
+            return [
+                Fieldset::make(fields: [
+                    {{ gridDefinition }}
+                                       ])
+            ];
+        }
+}

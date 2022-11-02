@@ -1,0 +1,18 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Contracts\AbstractRules;
+use Illuminate\Validation\Rule;
+use Support\Helpers\ArrayHelpers;
+
+class {{ class }} extends AbstractRules
+{
+
+    public function rules(): array
+    {
+        $rules = {{ rules }}
+
+        return ArrayHelpers::keyPrepend($rules, '{{ modelLowercase }}.');
+    }
+}
