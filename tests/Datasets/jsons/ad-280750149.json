@@ -1,0 +1,734 @@
+{
+    "ad": {
+        "@key": "280750149",
+        "@url": "https://services.mobile.de/search-api/ad/280750149",
+        "creation-date": {
+            "@value": "2022-01-11T12:09:40.003+01:00"
+        },
+        "modification-date": {
+            "@value": "2022-04-27T14:46:18+02:00"
+        },
+        "detail-page": {
+            "@url": "https://suchen.mobile.de/auto-inserat/alfa-romeo-spider-2600-spider-touring-original-1966-privat-straubing/280750149.html?source=api"
+        },
+        "seller-inventory-key": {
+            "@value": "alfa 2600"
+        },
+        "vehicle": {
+            "class": {
+                "@key": "Car",
+                "@url": "https://services.mobile.de/refdata/classes/Car",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "Pkw"
+                }
+            },
+            "category": {
+                "@key": "Cabrio",
+                "@url": "https://services.mobile.de/refdata/classes/Car/categories/Cabrio",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "Cabrio/Roadster"
+                }
+            },
+            "make": {
+                "@key": "ALFA ROMEO",
+                "@url": "https://services.mobile.de/refdata/classes/Car/makes/ALFA ROMEO",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "Alfa Romeo"
+                }
+            },
+            "model": {
+                "@key": "Spider",
+                "@url": "https://services.mobile.de/refdata/classes/Car/makes/ALFA ROMEO/models/Spider",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "Spider"
+                }
+            },
+            "model-description": {
+                "@value": "2600 Spider Touring *ORIGINAL*1966*PRIVAT*"
+            },
+            "damage-and-unrepaired": {
+                "@value": "false"
+            },
+            "accident-damaged": {
+                "@value": "false"
+            },
+            "roadworthy": {
+                "@value": "true"
+            },
+            "specifics": {
+                "exterior-color": {
+                    "@key": "RED",
+                    "@url": "https://services.mobile.de/refdata/colors/RED",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "Rot"
+                    }
+                },
+                "mileage": {
+                    "@value": "39000"
+                },
+                "door-count": {
+                    "@key": "TWO_OR_THREE",
+                    "@url": "https://services.mobile.de/refdata/doorcounts/TWO_OR_THREE",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "2/3"
+                    }
+                },
+                "first-registration": {
+                    "@value": "1966-03"
+                },
+                "fuel": {
+                    "@key": "PETROL",
+                    "@url": "https://services.mobile.de/refdata/fuels/PETROL",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "Benzin"
+                    }
+                },
+                "power": {
+                    "@value": "111"
+                },
+                "gearbox": {
+                    "@key": "MANUAL_GEAR",
+                    "@url": "https://services.mobile.de/refdata/gearboxes/MANUAL_GEAR",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "Schaltgetriebe"
+                    }
+                },
+                "num-seats": {
+                    "@value": "4"
+                },
+                "cubic-capacity": {
+                    "@value": "2584"
+                },
+                "condition": {
+                    "@key": "USED",
+                    "@url": "https://services.mobile.de/refdata/conditions/USED",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "Gebrauchtfahrzeug"
+                    }
+                },
+                "usage-type": {
+                    "@key": "CLASSIC",
+                    "@url": "https://services.mobile.de/refdata/usagetypes/CLASSIC",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "Oldtimer"
+                    }
+                },
+                "interior-color": {
+                    "@key": "BLACK",
+                    "@url": "https://services.mobile.de/refdata/interiorColors/BLACK",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "Schwarz"
+                    }
+                },
+                "interior-type": {
+                    "@key": "LEATHER",
+                    "@url": "https://services.mobile.de/refdata/interiorTypes/LEATHER",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "Vollleder"
+                    }
+                },
+                "number-of-previous-owners": "1"
+            }
+        },
+        "description": "ALFA ROMEO 2600 SPIDER TOURING -  - Das angebotene Fahrzeug befindet sich im Originalzustand. -  - Es hat nur einen Vorbesitzer und wurde am 23.03.1966 zugelassen. -  - Das Fahrzeug hat noch den originalen Pappbrief. -  - Die Erstauslieferung war in Nürnberg durch die Firma SCUDERIA AUTO-NEUSER. -  - Der Alfa befindet sich seit ca. 10 Jahren in meiner Sammlung  -  - und steht trocken in meiner Ausstellungshalle. -  - PRIVATVERKAUF -  - Bei Interesse bitte unter der 0151/16733180 anrufen. -  - Irrtümer, Änderungen und Zwischenverkauf vorbehalten",
+        "enrichedDescription": "**ALFA ROMEO 2600 SPIDER TOURING\\\\\\\\**Das angebotene Fahrzeug befindet sich im Originalzustand.\\\\\\\\Es hat nur einen Vorbesitzer und wurde am **23.03.1966** zugelassen.\\\\\\\\Das Fahrzeug hat noch den originalen **Pappbrief**.\\\\\\\\Die Erstauslieferung war in Nürnberg durch die Firma **SCUDERIA AUTO-NEUSER**.\\\\\\\\Der Alfa befindet sich seit ca. 10 Jahren in meiner Sammlung \\\\\\\\und steht trocken in meiner Ausstellungshalle.\\\\\\\\**PRIVATVERKAUF\\\\\\\\Bei Interesse bitte unter der 0151/16733180 anrufen.**\\\\\\\\----Irrtümer, Änderungen und Zwischenverkauf vorbehalten",
+        "images": {
+            "@gallery-url": "https://img.classistatic.de/api/v1/mo-prod/images/6e/6ee144f0-5b55-4343-8c97-f63aca8bb814?rule=eps_23.jpg",
+            "@url": "https://services.mobile.de/search-api/ad/280750149/images",
+            "image": [
+                {
+                    "representation": [
+                        {
+                            "@size": "S",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/6e/6ee144f0-5b55-4343-8c97-f63aca8bb814?rule=mo-200.jpg"
+                        },
+                        {
+                            "@size": "XL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/6e/6ee144f0-5b55-4343-8c97-f63aca8bb814?rule=mo-640.jpg"
+                        },
+                        {
+                            "@size": "ICON",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/6e/6ee144f0-5b55-4343-8c97-f63aca8bb814?rule=mo-80.jpg"
+                        },
+                        {
+                            "@size": "L",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/6e/6ee144f0-5b55-4343-8c97-f63aca8bb814?rule=mo-360.jpg"
+                        },
+                        {
+                            "@size": "M",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/6e/6ee144f0-5b55-4343-8c97-f63aca8bb814?rule=mo-240.jpg"
+                        },
+                        {
+                            "@size": "XXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/6e/6ee144f0-5b55-4343-8c97-f63aca8bb814?rule=mo-1024.jpg"
+                        },
+                        {
+                            "@size": "XXXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/6e/6ee144f0-5b55-4343-8c97-f63aca8bb814?rule=mo-1600.jpg"
+                        }
+                    ]
+                },
+                {
+                    "representation": [
+                        {
+                            "@size": "S",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/17/17d52197-f583-4bed-8cbb-71956c2a8c81?rule=mo-200.jpg"
+                        },
+                        {
+                            "@size": "XL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/17/17d52197-f583-4bed-8cbb-71956c2a8c81?rule=mo-640.jpg"
+                        },
+                        {
+                            "@size": "ICON",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/17/17d52197-f583-4bed-8cbb-71956c2a8c81?rule=mo-80.jpg"
+                        },
+                        {
+                            "@size": "L",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/17/17d52197-f583-4bed-8cbb-71956c2a8c81?rule=mo-360.jpg"
+                        },
+                        {
+                            "@size": "M",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/17/17d52197-f583-4bed-8cbb-71956c2a8c81?rule=mo-240.jpg"
+                        },
+                        {
+                            "@size": "XXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/17/17d52197-f583-4bed-8cbb-71956c2a8c81?rule=mo-1024.jpg"
+                        },
+                        {
+                            "@size": "XXXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/17/17d52197-f583-4bed-8cbb-71956c2a8c81?rule=mo-1600.jpg"
+                        }
+                    ]
+                },
+                {
+                    "representation": [
+                        {
+                            "@size": "S",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/3c/3cebfab2-c77a-4264-b7e9-e5405a0f8d6e?rule=mo-200.jpg"
+                        },
+                        {
+                            "@size": "XL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/3c/3cebfab2-c77a-4264-b7e9-e5405a0f8d6e?rule=mo-640.jpg"
+                        },
+                        {
+                            "@size": "ICON",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/3c/3cebfab2-c77a-4264-b7e9-e5405a0f8d6e?rule=mo-80.jpg"
+                        },
+                        {
+                            "@size": "L",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/3c/3cebfab2-c77a-4264-b7e9-e5405a0f8d6e?rule=mo-360.jpg"
+                        },
+                        {
+                            "@size": "M",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/3c/3cebfab2-c77a-4264-b7e9-e5405a0f8d6e?rule=mo-240.jpg"
+                        },
+                        {
+                            "@size": "XXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/3c/3cebfab2-c77a-4264-b7e9-e5405a0f8d6e?rule=mo-1024.jpg"
+                        },
+                        {
+                            "@size": "XXXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/3c/3cebfab2-c77a-4264-b7e9-e5405a0f8d6e?rule=mo-1600.jpg"
+                        }
+                    ]
+                },
+                {
+                    "representation": [
+                        {
+                            "@size": "S",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/3f/3f7c8d55-52bc-4369-aa65-d328d376b1d2?rule=mo-200.jpg"
+                        },
+                        {
+                            "@size": "XL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/3f/3f7c8d55-52bc-4369-aa65-d328d376b1d2?rule=mo-640.jpg"
+                        },
+                        {
+                            "@size": "ICON",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/3f/3f7c8d55-52bc-4369-aa65-d328d376b1d2?rule=mo-80.jpg"
+                        },
+                        {
+                            "@size": "L",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/3f/3f7c8d55-52bc-4369-aa65-d328d376b1d2?rule=mo-360.jpg"
+                        },
+                        {
+                            "@size": "M",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/3f/3f7c8d55-52bc-4369-aa65-d328d376b1d2?rule=mo-240.jpg"
+                        },
+                        {
+                            "@size": "XXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/3f/3f7c8d55-52bc-4369-aa65-d328d376b1d2?rule=mo-1024.jpg"
+                        },
+                        {
+                            "@size": "XXXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/3f/3f7c8d55-52bc-4369-aa65-d328d376b1d2?rule=mo-1600.jpg"
+                        }
+                    ]
+                },
+                {
+                    "representation": [
+                        {
+                            "@size": "S",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/59/59f297fd-8853-4699-8e3a-d842708bc8e0?rule=mo-200.jpg"
+                        },
+                        {
+                            "@size": "XL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/59/59f297fd-8853-4699-8e3a-d842708bc8e0?rule=mo-640.jpg"
+                        },
+                        {
+                            "@size": "ICON",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/59/59f297fd-8853-4699-8e3a-d842708bc8e0?rule=mo-80.jpg"
+                        },
+                        {
+                            "@size": "L",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/59/59f297fd-8853-4699-8e3a-d842708bc8e0?rule=mo-360.jpg"
+                        },
+                        {
+                            "@size": "M",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/59/59f297fd-8853-4699-8e3a-d842708bc8e0?rule=mo-240.jpg"
+                        },
+                        {
+                            "@size": "XXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/59/59f297fd-8853-4699-8e3a-d842708bc8e0?rule=mo-1024.jpg"
+                        },
+                        {
+                            "@size": "XXXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/59/59f297fd-8853-4699-8e3a-d842708bc8e0?rule=mo-1600.jpg"
+                        }
+                    ]
+                },
+                {
+                    "representation": [
+                        {
+                            "@size": "S",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/cd/cd2d5ffa-1427-4d4f-82c7-72a041f5fa15?rule=mo-200.jpg"
+                        },
+                        {
+                            "@size": "XL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/cd/cd2d5ffa-1427-4d4f-82c7-72a041f5fa15?rule=mo-640.jpg"
+                        },
+                        {
+                            "@size": "ICON",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/cd/cd2d5ffa-1427-4d4f-82c7-72a041f5fa15?rule=mo-80.jpg"
+                        },
+                        {
+                            "@size": "L",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/cd/cd2d5ffa-1427-4d4f-82c7-72a041f5fa15?rule=mo-360.jpg"
+                        },
+                        {
+                            "@size": "M",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/cd/cd2d5ffa-1427-4d4f-82c7-72a041f5fa15?rule=mo-240.jpg"
+                        },
+                        {
+                            "@size": "XXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/cd/cd2d5ffa-1427-4d4f-82c7-72a041f5fa15?rule=mo-1024.jpg"
+                        },
+                        {
+                            "@size": "XXXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/cd/cd2d5ffa-1427-4d4f-82c7-72a041f5fa15?rule=mo-1600.jpg"
+                        }
+                    ]
+                },
+                {
+                    "representation": [
+                        {
+                            "@size": "S",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/65/65cd3ad6-f5fe-48d2-ae7b-9d593e358f46?rule=mo-200.jpg"
+                        },
+                        {
+                            "@size": "XL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/65/65cd3ad6-f5fe-48d2-ae7b-9d593e358f46?rule=mo-640.jpg"
+                        },
+                        {
+                            "@size": "ICON",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/65/65cd3ad6-f5fe-48d2-ae7b-9d593e358f46?rule=mo-80.jpg"
+                        },
+                        {
+                            "@size": "L",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/65/65cd3ad6-f5fe-48d2-ae7b-9d593e358f46?rule=mo-360.jpg"
+                        },
+                        {
+                            "@size": "M",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/65/65cd3ad6-f5fe-48d2-ae7b-9d593e358f46?rule=mo-240.jpg"
+                        },
+                        {
+                            "@size": "XXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/65/65cd3ad6-f5fe-48d2-ae7b-9d593e358f46?rule=mo-1024.jpg"
+                        },
+                        {
+                            "@size": "XXXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/65/65cd3ad6-f5fe-48d2-ae7b-9d593e358f46?rule=mo-1600.jpg"
+                        }
+                    ]
+                },
+                {
+                    "representation": [
+                        {
+                            "@size": "S",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/0b/0bc6e93c-ab79-4967-b404-8fd924c27c0a?rule=mo-200.jpg"
+                        },
+                        {
+                            "@size": "XL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/0b/0bc6e93c-ab79-4967-b404-8fd924c27c0a?rule=mo-640.jpg"
+                        },
+                        {
+                            "@size": "ICON",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/0b/0bc6e93c-ab79-4967-b404-8fd924c27c0a?rule=mo-80.jpg"
+                        },
+                        {
+                            "@size": "L",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/0b/0bc6e93c-ab79-4967-b404-8fd924c27c0a?rule=mo-360.jpg"
+                        },
+                        {
+                            "@size": "M",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/0b/0bc6e93c-ab79-4967-b404-8fd924c27c0a?rule=mo-240.jpg"
+                        },
+                        {
+                            "@size": "XXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/0b/0bc6e93c-ab79-4967-b404-8fd924c27c0a?rule=mo-1024.jpg"
+                        },
+                        {
+                            "@size": "XXXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/0b/0bc6e93c-ab79-4967-b404-8fd924c27c0a?rule=mo-1600.jpg"
+                        }
+                    ]
+                },
+                {
+                    "representation": [
+                        {
+                            "@size": "S",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/e3/e3978cd9-6b02-4f55-a2ab-9b3de1795eb2?rule=mo-200.jpg"
+                        },
+                        {
+                            "@size": "XL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/e3/e3978cd9-6b02-4f55-a2ab-9b3de1795eb2?rule=mo-640.jpg"
+                        },
+                        {
+                            "@size": "ICON",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/e3/e3978cd9-6b02-4f55-a2ab-9b3de1795eb2?rule=mo-80.jpg"
+                        },
+                        {
+                            "@size": "L",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/e3/e3978cd9-6b02-4f55-a2ab-9b3de1795eb2?rule=mo-360.jpg"
+                        },
+                        {
+                            "@size": "M",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/e3/e3978cd9-6b02-4f55-a2ab-9b3de1795eb2?rule=mo-240.jpg"
+                        },
+                        {
+                            "@size": "XXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/e3/e3978cd9-6b02-4f55-a2ab-9b3de1795eb2?rule=mo-1024.jpg"
+                        },
+                        {
+                            "@size": "XXXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/e3/e3978cd9-6b02-4f55-a2ab-9b3de1795eb2?rule=mo-1600.jpg"
+                        }
+                    ]
+                },
+                {
+                    "representation": [
+                        {
+                            "@size": "S",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/53/539b95c4-50c8-42a6-98c0-c5bea327106c?rule=mo-200.jpg"
+                        },
+                        {
+                            "@size": "XL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/53/539b95c4-50c8-42a6-98c0-c5bea327106c?rule=mo-640.jpg"
+                        },
+                        {
+                            "@size": "ICON",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/53/539b95c4-50c8-42a6-98c0-c5bea327106c?rule=mo-80.jpg"
+                        },
+                        {
+                            "@size": "L",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/53/539b95c4-50c8-42a6-98c0-c5bea327106c?rule=mo-360.jpg"
+                        },
+                        {
+                            "@size": "M",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/53/539b95c4-50c8-42a6-98c0-c5bea327106c?rule=mo-240.jpg"
+                        },
+                        {
+                            "@size": "XXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/53/539b95c4-50c8-42a6-98c0-c5bea327106c?rule=mo-1024.jpg"
+                        },
+                        {
+                            "@size": "XXXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/53/539b95c4-50c8-42a6-98c0-c5bea327106c?rule=mo-1600.jpg"
+                        }
+                    ]
+                },
+                {
+                    "representation": [
+                        {
+                            "@size": "S",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/63/6340150a-7a3a-4599-8a04-171d543e8217?rule=mo-200.jpg"
+                        },
+                        {
+                            "@size": "XL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/63/6340150a-7a3a-4599-8a04-171d543e8217?rule=mo-640.jpg"
+                        },
+                        {
+                            "@size": "ICON",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/63/6340150a-7a3a-4599-8a04-171d543e8217?rule=mo-80.jpg"
+                        },
+                        {
+                            "@size": "L",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/63/6340150a-7a3a-4599-8a04-171d543e8217?rule=mo-360.jpg"
+                        },
+                        {
+                            "@size": "M",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/63/6340150a-7a3a-4599-8a04-171d543e8217?rule=mo-240.jpg"
+                        },
+                        {
+                            "@size": "XXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/63/6340150a-7a3a-4599-8a04-171d543e8217?rule=mo-1024.jpg"
+                        },
+                        {
+                            "@size": "XXXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/63/6340150a-7a3a-4599-8a04-171d543e8217?rule=mo-1600.jpg"
+                        }
+                    ]
+                },
+                {
+                    "representation": [
+                        {
+                            "@size": "S",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/10/10e0bbf4-45ab-4a3a-8938-c1429c55598c?rule=mo-200.jpg"
+                        },
+                        {
+                            "@size": "XL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/10/10e0bbf4-45ab-4a3a-8938-c1429c55598c?rule=mo-640.jpg"
+                        },
+                        {
+                            "@size": "ICON",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/10/10e0bbf4-45ab-4a3a-8938-c1429c55598c?rule=mo-80.jpg"
+                        },
+                        {
+                            "@size": "L",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/10/10e0bbf4-45ab-4a3a-8938-c1429c55598c?rule=mo-360.jpg"
+                        },
+                        {
+                            "@size": "M",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/10/10e0bbf4-45ab-4a3a-8938-c1429c55598c?rule=mo-240.jpg"
+                        },
+                        {
+                            "@size": "XXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/10/10e0bbf4-45ab-4a3a-8938-c1429c55598c?rule=mo-1024.jpg"
+                        },
+                        {
+                            "@size": "XXXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/10/10e0bbf4-45ab-4a3a-8938-c1429c55598c?rule=mo-1600.jpg"
+                        }
+                    ]
+                },
+                {
+                    "representation": [
+                        {
+                            "@size": "S",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/87/8731909d-c1c2-4792-8afd-37b01c70906e?rule=mo-200.jpg"
+                        },
+                        {
+                            "@size": "XL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/87/8731909d-c1c2-4792-8afd-37b01c70906e?rule=mo-640.jpg"
+                        },
+                        {
+                            "@size": "ICON",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/87/8731909d-c1c2-4792-8afd-37b01c70906e?rule=mo-80.jpg"
+                        },
+                        {
+                            "@size": "L",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/87/8731909d-c1c2-4792-8afd-37b01c70906e?rule=mo-360.jpg"
+                        },
+                        {
+                            "@size": "M",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/87/8731909d-c1c2-4792-8afd-37b01c70906e?rule=mo-240.jpg"
+                        },
+                        {
+                            "@size": "XXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/87/8731909d-c1c2-4792-8afd-37b01c70906e?rule=mo-1024.jpg"
+                        },
+                        {
+                            "@size": "XXXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/87/8731909d-c1c2-4792-8afd-37b01c70906e?rule=mo-1600.jpg"
+                        }
+                    ]
+                },
+                {
+                    "representation": [
+                        {
+                            "@size": "S",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/bd/bd80bf2c-7cdc-445e-873d-ab3d208c8b82?rule=mo-200.jpg"
+                        },
+                        {
+                            "@size": "XL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/bd/bd80bf2c-7cdc-445e-873d-ab3d208c8b82?rule=mo-640.jpg"
+                        },
+                        {
+                            "@size": "ICON",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/bd/bd80bf2c-7cdc-445e-873d-ab3d208c8b82?rule=mo-80.jpg"
+                        },
+                        {
+                            "@size": "L",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/bd/bd80bf2c-7cdc-445e-873d-ab3d208c8b82?rule=mo-360.jpg"
+                        },
+                        {
+                            "@size": "M",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/bd/bd80bf2c-7cdc-445e-873d-ab3d208c8b82?rule=mo-240.jpg"
+                        },
+                        {
+                            "@size": "XXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/bd/bd80bf2c-7cdc-445e-873d-ab3d208c8b82?rule=mo-1024.jpg"
+                        },
+                        {
+                            "@size": "XXXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/bd/bd80bf2c-7cdc-445e-873d-ab3d208c8b82?rule=mo-1600.jpg"
+                        }
+                    ]
+                },
+                {
+                    "representation": [
+                        {
+                            "@size": "S",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/fa/fa991fdd-1f4c-4108-ad98-ed69f1e30894?rule=mo-200.jpg"
+                        },
+                        {
+                            "@size": "XL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/fa/fa991fdd-1f4c-4108-ad98-ed69f1e30894?rule=mo-640.jpg"
+                        },
+                        {
+                            "@size": "ICON",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/fa/fa991fdd-1f4c-4108-ad98-ed69f1e30894?rule=mo-80.jpg"
+                        },
+                        {
+                            "@size": "L",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/fa/fa991fdd-1f4c-4108-ad98-ed69f1e30894?rule=mo-360.jpg"
+                        },
+                        {
+                            "@size": "M",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/fa/fa991fdd-1f4c-4108-ad98-ed69f1e30894?rule=mo-240.jpg"
+                        },
+                        {
+                            "@size": "XXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/fa/fa991fdd-1f4c-4108-ad98-ed69f1e30894?rule=mo-1024.jpg"
+                        },
+                        {
+                            "@size": "XXXL",
+                            "@url": "https://img.classistatic.de/api/v1/mo-prod/images/fa/fa991fdd-1f4c-4108-ad98-ed69f1e30894?rule=mo-1600.jpg"
+                        }
+                    ]
+                }
+            ]
+        },
+        "price": {
+            "@currency": "EUR",
+            "@type": "FIXED",
+            "consumer-price-amount": {
+                "@value": "134900.00"
+            },
+            "vatable": {
+                "@value": "false"
+            }
+        },
+        "seller": {
+            "@key": "471285",
+            "@url": "https://services.mobile.de/search-api/seller/471285",
+            "type": {
+                "@value": "DEALER",
+                "@commercial": "true"
+            },
+            "company-name": {
+                "@value": "Autohaus Ing. L. Freitag GmbH & Co.KG"
+            },
+            "address": {
+                "street": {
+                    "@value": "Chamer Str. 37"
+                },
+                "zipcode": {
+                    "@value": "94315"
+                },
+                "city": {
+                    "@value": "Straubing"
+                },
+                "country-code": {
+                    "@value": "DE"
+                }
+            },
+            "phone": [
+                {
+                    "@type": "FIXED",
+                    "@country-calling-code": "49",
+                    "@area-code": "09421",
+                    "@number": "810740"
+                },
+                {
+                    "@type": "FAX",
+                    "@country-calling-code": "49",
+                    "@area-code": "09421",
+                    "@number": "810736"
+                }
+            ],
+            "email": {
+                "@value": "autohaus-freitag@mobile.de"
+            },
+            "homepage": {
+                "@value": "https://home.mobile.de/AUTOHAUS-FREITAG"
+            },
+            "mobile-seller-since": {
+                "@value": "2000-12-13+01:00"
+            },
+            "coordinates": {
+                "latitude": "48.891061",
+                "longitude": "12.574898"
+            },
+            "logo-image": {
+                "representation": [
+                    {
+                        "@size": "S",
+                        "@url": "https://img.classistatic.de/api/v1/mo-prod/images/06/0637b4db-f2a5-4540-8f79-98b73ee9d086?rule=mo-200.jpg"
+                    },
+                    {
+                        "@size": "XL",
+                        "@url": "https://img.classistatic.de/api/v1/mo-prod/images/06/0637b4db-f2a5-4540-8f79-98b73ee9d086?rule=mo-640.jpg"
+                    },
+                    {
+                        "@size": "ICON",
+                        "@url": "https://img.classistatic.de/api/v1/mo-prod/images/06/0637b4db-f2a5-4540-8f79-98b73ee9d086?rule=mo-80.jpg"
+                    },
+                    {
+                        "@size": "L",
+                        "@url": "https://img.classistatic.de/api/v1/mo-prod/images/06/0637b4db-f2a5-4540-8f79-98b73ee9d086?rule=mo-360.jpg"
+                    },
+                    {
+                        "@size": "M",
+                        "@url": "https://img.classistatic.de/api/v1/mo-prod/images/06/0637b4db-f2a5-4540-8f79-98b73ee9d086?rule=mo-240.jpg"
+                    },
+                    {
+                        "@size": "XXL",
+                        "@url": "https://img.classistatic.de/api/v1/mo-prod/images/06/0637b4db-f2a5-4540-8f79-98b73ee9d086?rule=mo-1024.jpg"
+                    },
+                    {
+                        "@size": "XXXL",
+                        "@url": "https://img.classistatic.de/api/v1/mo-prod/images/06/0637b4db-f2a5-4540-8f79-98b73ee9d086?rule=mo-1600.jpg"
+                    }
+                ]
+            },
+            "contact-languages": {
+                "language": [
+                    "de",
+                    "en"
+                ]
+            }
+        }
+    }
+}

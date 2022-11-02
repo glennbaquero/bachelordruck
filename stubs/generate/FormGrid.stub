@@ -1,0 +1,20 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Livewire\View\Fieldset;
+use Support\Creators\FormFieldCreator;
+
+class {{ class }}
+{
+    private string $modelName = '{{ modelLowercase }}';
+
+    public function __invoke() : array {
+            $fieldCreator = new FormFieldCreator($this->modelName);
+            return [
+                Fieldset::make(fields: [
+                    {{ gridDefinition }}
+                                       ])
+            ];
+        }
+}

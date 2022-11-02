@@ -1,0 +1,14 @@
+{
+    "reference": {
+        "item": [
+            {
+                "@key": "ABARTH",
+                "@url": "https://services.mobile.de/refdata/classes/Car/makes/ABARTH",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "Abarth"
+                }
+            }
+        ]
+    }
+}

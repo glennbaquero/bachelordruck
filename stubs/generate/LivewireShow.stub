@@ -1,0 +1,36 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Livewire\Base\Show;
+use Domain\{{ domain }}\Actions\{{ model }}DeleteAction;
+use Domain\{{ domain }}\Models\{{ model }};
+use Domain\{{ domain }}\ShowGrids\{{ model }}ShowGrid;
+use Livewire\Redirector;
+
+
+class {{ class }} extends Show
+{
+    public string $name = '{{ modelLowercase }}';
+    public {{ model }}   $model;
+
+
+    public function mount({{ model }} $model) : void {
+        $this->model = $model;
+    }
+
+    public function grids(): array
+    {
+        return app({{ model }}ShowGrid::class)();
+    }
+
+    public function delete({{ model }}DeleteAction ${{ modelLowercase }}DeleteAction) : Redirector {
+        ${{ modelLowercase }}DeleteAction($this->model);
+        session()->flash('message', __('notification.delete_message',['model'=>__('model.'.$this->name)]));
+        return redirect()->to(route('{{ modelLowercase }}.list'));
+    }
+
+    public function edit() : Redirector {
+        return redirect()->to(route('{{ modelLowercase }}.edit', ['model' => $this->model->id]));
+    }
+}

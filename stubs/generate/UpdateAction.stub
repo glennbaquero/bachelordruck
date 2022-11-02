@@ -1,0 +1,15 @@
+<?php
+
+namespace {{ namespace }};
+
+use Domain\{{ domain }}\Models\{{ model }};
+use Domain\{{ domain }}\DataTransferObjects\{{ model }}Data;
+
+class {{ class }}
+{
+    public function __invoke({{ model }} ${{ modelLowercase }}, {{ model }}Data ${{ modelLowercase }}Data) : {{ model }} {
+        {{ fieldMapping }}
+        ${{ modelLowercase }}->save();
+        return ${{ modelLowercase }}->refresh();
+    }
+}

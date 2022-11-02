@@ -1,0 +1,12 @@
+<?php
+
+namespace {{ namespace }};
+
+use Domain\{{ domain }}\Models\{{ model }};
+
+class {{ class }}
+{
+    public function __invoke({{ model }} ${{ modelLowercase }}) : void {
+        ${{ modelLowercase }}->delete();
+    }
+}

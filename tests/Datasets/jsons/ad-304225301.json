@@ -1,0 +1,641 @@
+{
+    "ad": {
+        "@key": "304225301",
+        "@url": "https://services.mobile.de/search-api/ad/304225301",
+        "creation-date": {
+            "@value": "2022-03-31T14:36:05.280+02:00"
+        },
+        "modification-date": {
+            "@value": "2022-04-27T14:46:18+02:00"
+        },
+        "detail-page": {
+            "@url": "https://suchen.mobile.de/auto-inserat/renault-megane-r-s-trophy-nr-89-von-500-straubing/304225301.html?source=api"
+        },
+        "seller-inventory-key": {
+            "@value": "A3198"
+        },
+        "vehicle": {
+            "class": {
+                "@key": "Car",
+                "@url": "https://services.mobile.de/refdata/classes/Car",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "Pkw"
+                }
+            },
+            "category": {
+                "@key": "Limousine",
+                "@url": "https://services.mobile.de/refdata/classes/Car/categories/Limousine",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "Limousine"
+                }
+            },
+            "make": {
+                "@key": "RENAULT",
+                "@url": "https://services.mobile.de/refdata/classes/Car/makes/RENAULT",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "Renault"
+                }
+            },
+            "model": {
+                "@key": "Megane",
+                "@url": "https://services.mobile.de/refdata/classes/Car/makes/RENAULT/models/Megane",
+                "local-description": {
+                    "@xml-lang": "de",
+                    "$": "Megane"
+                }
+            },
+            "model-description": {
+                "@value": "Megane R.S. Trophy Nr. 89 von 500"
+            },
+            "damage-and-unrepaired": {
+                "@value": "false"
+            },
+            "accident-damaged": {
+                "@value": "false"
+            },
+            "roadworthy": {
+                "@value": "true"
+            },
+            "features": {
+                "@url": "https://services.mobile.de/refdata/classes/Car/features",
+                "feature": [
+                    {
+                        "@key": "METALLIC",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/METALLIC",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Metallic"
+                        }
+                    },
+                    {
+                        "@key": "ALLOY_WHEELS",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/ALLOY_WHEELS",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Leichtmetallfelgen"
+                        }
+                    },
+                    {
+                        "@key": "CENTRAL_LOCKING",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/CENTRAL_LOCKING",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Zentralverriegelung"
+                        }
+                    },
+                    {
+                        "@key": "ELECTRIC_WINDOWS",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/ELECTRIC_WINDOWS",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Elektr. Fensterheber"
+                        }
+                    },
+                    {
+                        "@key": "POWER_ASSISTED_STEERING",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/POWER_ASSISTED_STEERING",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Servolenkung"
+                        }
+                    },
+                    {
+                        "@key": "ABS",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/ABS",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "ABS"
+                        }
+                    },
+                    {
+                        "@key": "ESP",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/ESP",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "ESP"
+                        }
+                    },
+                    {
+                        "@key": "NAVIGATION_SYSTEM",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/NAVIGATION_SYSTEM",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Navigationssystem"
+                        }
+                    },
+                    {
+                        "@key": "AUTOMATIC_RAIN_SENSOR",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/AUTOMATIC_RAIN_SENSOR",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Regensensor"
+                        }
+                    },
+                    {
+                        "@key": "ELECTRIC_EXTERIOR_MIRRORS",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/ELECTRIC_EXTERIOR_MIRRORS",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Elektr. Seitenspiegel"
+                        }
+                    },
+                    {
+                        "@key": "PERFORMANCE_HANDLING_SYSTEM",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/PERFORMANCE_HANDLING_SYSTEM",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Sportfahrwerk"
+                        }
+                    },
+                    {
+                        "@key": "SPORT_PACKAGE",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/SPORT_PACKAGE",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Sportpaket"
+                        }
+                    },
+                    {
+                        "@key": "ON_BOARD_COMPUTER",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/ON_BOARD_COMPUTER",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Bordcomputer"
+                        }
+                    },
+                    {
+                        "@key": "HANDS_FREE_PHONE_SYSTEM",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/HANDS_FREE_PHONE_SYSTEM",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Freisprecheinrichtung"
+                        }
+                    },
+                    {
+                        "@key": "MULTIFUNCTIONAL_WHEEL",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/MULTIFUNCTIONAL_WHEEL",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Multifunktionslenkrad"
+                        }
+                    },
+                    {
+                        "@key": "LIGHT_SENSOR",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/LIGHT_SENSOR",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Lichtsensor"
+                        }
+                    },
+                    {
+                        "@key": "NONSMOKER_VEHICLE",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/NONSMOKER_VEHICLE",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Nichtraucher-Fahrzeug"
+                        }
+                    },
+                    {
+                        "@key": "START_STOP_SYSTEM",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/START_STOP_SYSTEM",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Start/Stopp-Automatik"
+                        }
+                    },
+                    {
+                        "@key": "KEYLESS_ENTRY",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/KEYLESS_ENTRY",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Schlüssellose Zentralverriegelung"
+                        }
+                    },
+                    {
+                        "@key": "TIRE_PRESSURE_MONITORING",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/TIRE_PRESSURE_MONITORING",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Reifendruckkontrolle"
+                        }
+                    },
+                    {
+                        "@key": "PADDLE_SHIFTERS",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/PADDLE_SHIFTERS",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Schaltwippen"
+                        }
+                    },
+                    {
+                        "@key": "TOUCHSCREEN",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/TOUCHSCREEN",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Touchscreen"
+                        }
+                    },
+                    {
+                        "@key": "USB",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/USB",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "USB"
+                        }
+                    },
+                    {
+                        "@key": "CARPLAY",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/CARPLAY",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Apple CarPlay"
+                        }
+                    },
+                    {
+                        "@key": "ANDROID_AUTO",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/ANDROID_AUTO",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Android Auto"
+                        }
+                    },
+                    {
+                        "@key": "SPEED_LIMITER",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/SPEED_LIMITER",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Geschwindigkeitsbegrenzer"
+                        }
+                    },
+                    {
+                        "@key": "PARKING_SENSORS",
+                        "@url": "https://services.mobile.de/refdata/classes/Car/features/PARKING_SENSORS",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Einparkhilfe"
+                        }
+                    }
+                ]
+            },
+            "specifics": {
+                "exterior-color": {
+                    "@key": "WHITE",
+                    "@url": "https://services.mobile.de/refdata/colors/WHITE",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "Weiß"
+                    },
+                    "metalic": {
+                        "@value": "true"
+                    },
+                    "manufacturer-color-name": {
+                        "@value": "Perlmutt"
+                    }
+                },
+                "mileage": {
+                    "@value": "10"
+                },
+                "general-inspection": {
+                    "@value": "2022-02"
+                },
+                "door-count": {
+                    "@key": "FOUR_OR_FIVE",
+                    "@url": "https://services.mobile.de/refdata/doorcounts/FOUR_OR_FIVE",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "4/5"
+                    }
+                },
+                "first-registration": {
+                    "@value": "2020-12"
+                },
+                "emission-class": {
+                    "@key": "EURO6",
+                    "@url": "https://services.mobile.de/refdata/emissionclasses/EURO6",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "Euro6"
+                    }
+                },
+                "emission-fuel-consumption": {
+                    "@envkv-compliant": "true",
+                    "@energy-efficiency-class": "E",
+                    "@co2-emission": "183",
+                    "@inner": "10.4",
+                    "@outer": "6.6",
+                    "@combined": "8",
+                    "@unit": "LITER_PER_100_KM",
+                    "@petrol-type": "NORMAL"
+                },
+                "emission-sticker": {
+                    "@key": "EMISSIONSSTICKER_GREEN",
+                    "@url": "https://services.mobile.de/refdata/emissionstickers/EMISSIONSSTICKER_GREEN",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "4 (Grün)"
+                    }
+                },
+                "fuel": {
+                    "@key": "PETROL",
+                    "@url": "https://services.mobile.de/refdata/fuels/PETROL",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "Benzin"
+                    }
+                },
+                "power": {
+                    "@value": "221"
+                },
+                "gearbox": {
+                    "@key": "MANUAL_GEAR",
+                    "@url": "https://services.mobile.de/refdata/gearboxes/MANUAL_GEAR",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "Schaltgetriebe"
+                    }
+                },
+                "climatisation": {
+                    "@key": "AUTOMATIC_CLIMATISATION_2_ZONES",
+                    "@url": "https://services.mobile.de/refdata/climatisations/AUTOMATIC_CLIMATISATION_2_ZONES",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "2-Zonen-Klimaautomatik"
+                    }
+                },
+                "num-seats": {
+                    "@value": "2"
+                },
+                "cubic-capacity": {
+                    "@value": "1798"
+                },
+                "condition": {
+                    "@key": "USED",
+                    "@url": "https://services.mobile.de/refdata/conditions/USED",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "Gebrauchtfahrzeug"
+                    }
+                },
+                "usage-type": {
+                    "@key": "PRE_REGISTRATION",
+                    "@url": "https://services.mobile.de/refdata/usagetypes/PRE_REGISTRATION",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "Tageszulassung"
+                    }
+                },
+                "identification-number": {
+                    "@value": "VF1RFB00X63918216"
+                },
+                "interior-color": {
+                    "@key": "BLACK",
+                    "@url": "https://services.mobile.de/refdata/interiorColors/BLACK",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "Schwarz"
+                    }
+                },
+                "interior-type": {
+                    "@key": "ALCANTARA",
+                    "@url": "https://services.mobile.de/refdata/interiorTypes/ALCANTARA",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "Alcantara"
+                    }
+                },
+                "airbag": {
+                    "@key": "FRONT_AND_SIDE_AND_MORE_AIRBAGS",
+                    "@url": "https://services.mobile.de/refdata/airbags/FRONT_AND_SIDE_AND_MORE_AIRBAGS",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "Front-, Seiten- und weitere Airbags"
+                    }
+                },
+                "parking-assistants": {
+                    "parking-assistant": [
+                        {
+                            "@key": "REAR_SENSORS",
+                            "@url": "https://services.mobile.de/refdata/parkingassistants/REAR_SENSORS"
+                        },
+                        {
+                            "@key": "REAR_VIEW_CAM",
+                            "@url": "https://services.mobile.de/refdata/parkingassistants/REAR_VIEW_CAM"
+                        }
+                    ]
+                },
+                "speed-control": {
+                    "@key": "CRUISE_CONTROL",
+                    "@url": "https://services.mobile.de/refdata/speedcontrols/CRUISE_CONTROL",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "Tempomat"
+                    }
+                },
+                "radio": {
+                    "radio-type": {
+                        "@key": "TUNER",
+                        "@url": "https://services.mobile.de/refdata/radiotypes/TUNER",
+                        "local-description": {
+                            "@xml-lang": "de",
+                            "$": "Tuner/Radio"
+                        }
+                    }
+                },
+                "daytime-running-lamps": {
+                    "@key": "LED_RUNNING_LIGHTS",
+                    "@url": "https://services.mobile.de/refdata/daytimerunninglamps/LED_RUNNING_LIGHTS",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "LED-Tagfahrlicht"
+                    }
+                },
+                "headlight-type": {
+                    "@key": "LED_HEADLIGHTS",
+                    "@url": "https://services.mobile.de/refdata/headlightstypes/LED_HEADLIGHTS",
+                    "local-description": {
+                        "@xml-lang": "de",
+                        "$": "LED-Scheinwerfer"
+                    }
+                }
+            }
+        },
+        "description": "Innenausstattung: - Alcantara, Schwarz, Durchladeeinrichtung, Multifunktionslenkrad, Schaltwippen, Servolenkung, Klimaautomatik mit 2 Klimazonen, 2 Sitzplätze -  - Außenausstattung: - 5 Türen, El. Seitenspiegel (beheizt), Zentralverriegelung inkl. Fernbedienung, Sportfahrwerk, Sportpaket, 19″ Aluminiumfelgen, LED-Scheinwerfer, LED-Tagfahrlicht, Beleuchtungsregelung (Lichtsensor), El. Fensterheber - vorne, El. Fensterheber - hinten -  - Technologie: - Geschw.-begrenzer, Tuner/Radio, Außenlufttemperatur, Reifendrucküberwachung, Keyless Entry, Freisprecheinrichtung, AUX, Navigationssystem, USB, CarPlay, Android Auto, Touchscreen, Regensensor, Einparkhilfe hinten, Einparkhilfe - Kamera, Bordcomputer, Tempomat -  - Sicherheit &amp; Umwelt: - Front-, Seiten und weitere Airbags, ABS, ESP, Start/Stopp-Automatik -  - Sonstiges: - Nichtraucher -  - Folgende Dienstleistungen stellen wir Ihnen zur Verfügung: -  - Garantie- und Garantieverlängerungen auf alle Fahrzeuge möglich, Finanzierung ab 0,00% möglich., Wir nehmen gerne Ihren Gebrauchten Inzahlung, Fahrzeugvermietung ab 19,90 €, Wir übernehmen Ihre Zulassungskosten, Ständig über 100 Fahrzeuge auf Lager - Zwischenverkauf und Irrtümer vorbehalten! - ",
+        "enrichedDescription": "**Innenausstattung:**\\\\Alcantara, Schwarz, Durchladeeinrichtung, Multifunktionslenkrad, Schaltwippen, Servolenkung, Klimaautomatik mit 2 Klimazonen, 2 Sitzplätze\\\\\\\\**Außenausstattung:**\\\\5 Türen, El. Seitenspiegel (beheizt), Zentralverriegelung inkl. Fernbedienung, Sportfahrwerk, Sportpaket, 19″ Aluminiumfelgen, LED-Scheinwerfer, LED-Tagfahrlicht, Beleuchtungsregelung (Lichtsensor), El. Fensterheber - vorne, El. Fensterheber - hinten\\\\\\\\**Technologie:**\\\\Geschw.-begrenzer, Tuner/Radio, Außenlufttemperatur, Reifendrucküberwachung, Keyless Entry, Freisprecheinrichtung, AUX, Navigationssystem, USB, CarPlay, Android Auto, Touchscreen, Regensensor, Einparkhilfe hinten, Einparkhilfe - Kamera, Bordcomputer, Tempomat\\\\\\\\**Sicherheit &amp; Umwelt:**\\\\Front-, Seiten und weitere Airbags, ABS, ESP, Start/Stopp-Automatik\\\\\\\\**Sonstiges:**\\\\Nichtraucher\\\\\\\\**Folgende Dienstleistungen stellen wir Ihnen zur Verfügung:**\\\\\\\\* **Garantie- und Garantieverlängerungen auf alle Fahrzeuge möglich**\\\\* **Finanzierung ab 0,00% möglich.**\\\\* **Wir nehmen gerne Ihren Gebrauchten Inzahlung**\\\\* **Fahrzeugvermietung ab 19,90 €**\\\\* **Wir übernehmen Ihre Zulassungskosten**\\\\* **Ständig über 100 Fahrzeuge auf Lager**\\\\Zwischenverkauf und Irrtümer vorbehalten!**\\\\**",
+        "images": {
+            "@gallery-url": "https://img.classistatic.de/api/v1/mo-prod/images/cf/cf1af96f-f637-43d4-8ba5-b2a5cff3fbdc?rule=eps_23.jpg",
+            "@url": "https://services.mobile.de/search-api/ad/304225301/images",
+            "image": [
+                {
+                    "representation": [
+                        {
+                            "@size": "S",
+                            "@url": "ab/1.png"
+                        },
+                        {
+                            "@size": "XL",
+                            "@url": "ab/2.png"
+                        },
+                        {
+                            "@size": "ICON",
+                            "@url": "ab/3.png"
+                        },
+                        {
+                            "@size": "L",
+                            "@url": "ab/4.png"
+                        },
+                        {
+                            "@size": "M",
+                            "@url": "ab/5.png"
+                        },
+                        {
+                            "@size": "XXL",
+                            "@url": "ab/6.png"
+                        },
+                        {
+                            "@size": "XXXL",
+                            "@url": "ab/7.png"
+                        }
+                    ]
+                },
+                {
+                    "representation": [
+                        {
+                            "@size": "S",
+                            "@url": "ac/8.png"
+                        },
+                        {
+                            "@size": "XL",
+                            "@url": "ac/9.png"
+                        },
+                        {
+                            "@size": "ICON",
+                            "@url": "ac/10.png"
+                        },
+                        {
+                            "@size": "L",
+                            "@url": "ac/11.png"
+                        },
+                        {
+                            "@size": "M",
+                            "@url": "ac/12.png"
+                        },
+                        {
+                            "@size": "XXL",
+                            "@url": "ac/13.png"
+                        },
+                        {
+                            "@size": "XXXL",
+                            "@url": "ac/14.png"
+                        }
+                    ]
+                }
+            ]
+        },
+        "price": {
+            "@currency": "EUR",
+            "@type": "FIXED",
+            "consumer-price-amount": {
+                "@value": "54900.00"
+            },
+            "vatable": {
+                "@value": "true"
+            },
+            "vat-rate": {
+                "@value": "0.1900"
+            }
+        },
+        "seller": {
+            "@key": "471285",
+            "@url": "https://services.mobile.de/search-api/seller/471285",
+            "type": {
+                "@value": "DEALER",
+                "@commercial": "true"
+            },
+            "company-name": {
+                "@value": "Autohaus Ing. L. Freitag GmbH & Co.KG"
+            },
+            "address": {
+                "street": {
+                    "@value": "Chamer Str. 37"
+                },
+                "zipcode": {
+                    "@value": "94315"
+                },
+                "city": {
+                    "@value": "Straubing"
+                },
+                "country-code": {
+                    "@value": "DE"
+                }
+            },
+            "phone": [
+                {
+                    "@type": "FIXED",
+                    "@country-calling-code": "49",
+                    "@area-code": "09421",
+                    "@number": "810740"
+                },
+                {
+                    "@type": "FAX",
+                    "@country-calling-code": "49",
+                    "@area-code": "09421",
+                    "@number": "810736"
+                }
+            ],
+            "email": {
+                "@value": "autohaus-freitag@mobile.de"
+            },
+            "homepage": {
+                "@value": "https://home.mobile.de/AUTOHAUS-FREITAG"
+            },
+            "mobile-seller-since": {
+                "@value": "2000-12-13+01:00"
+            },
+            "coordinates": {
+                "latitude": "48.891061",
+                "longitude": "12.574898"
+            },
+            "logo-image": {
+                "representation": [
+                    {
+                        "@size": "S",
+                        "@url": "https://img.classistatic.de/api/v1/mo-prod/images/06/0637b4db-f2a5-4540-8f79-98b73ee9d086?rule=mo-200.jpg"
+                    },
+                    {
+                        "@size": "XL",
+                        "@url": "https://img.classistatic.de/api/v1/mo-prod/images/06/0637b4db-f2a5-4540-8f79-98b73ee9d086?rule=mo-640.jpg"
+                    },
+                    {
+                        "@size": "ICON",
+                        "@url": "https://img.classistatic.de/api/v1/mo-prod/images/06/0637b4db-f2a5-4540-8f79-98b73ee9d086?rule=mo-80.jpg"
+                    },
+                    {
+                        "@size": "L",
+                        "@url": "https://img.classistatic.de/api/v1/mo-prod/images/06/0637b4db-f2a5-4540-8f79-98b73ee9d086?rule=mo-360.jpg"
+                    },
+                    {
+                        "@size": "M",
+                        "@url": "https://img.classistatic.de/api/v1/mo-prod/images/06/0637b4db-f2a5-4540-8f79-98b73ee9d086?rule=mo-240.jpg"
+                    },
+                    {
+                        "@size": "XXL",
+                        "@url": "https://img.classistatic.de/api/v1/mo-prod/images/06/0637b4db-f2a5-4540-8f79-98b73ee9d086?rule=mo-1024.jpg"
+                    },
+                    {
+                        "@size": "XXXL",
+                        "@url": "https://img.classistatic.de/api/v1/mo-prod/images/06/0637b4db-f2a5-4540-8f79-98b73ee9d086?rule=mo-1600.jpg"
+                    }
+                ]
+            },
+            "contact-languages": {
+                "language": [
+                    "de",
+                    "en"
+                ]
+            }
+        }
+    }
+}

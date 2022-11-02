@@ -1,0 +1,12 @@
+{
+    "reference": {
+        "item": {
+            "@key": "ANDERE",
+            "@url": "https://services.mobile.de/refdata/classes/Car/makes/AC/models/ANDERE",
+            "local-description": {
+                "@xml-lang": "de",
+                "$": "Andere"
+            }
+        }
+    }
+}

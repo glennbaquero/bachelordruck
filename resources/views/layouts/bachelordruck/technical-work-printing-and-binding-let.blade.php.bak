@@ -1,0 +1,516 @@
+@extends('layouts.base')
+
+@section('body')
+    <main class="flex flex-col min-h-screen mx-auto font-raleway">
+        @if(config('cms.header'))
+            <x-dynamic-component component="{{  config('cms.header')  }}" :main-navigation="$mainNavigation"/>
+        @endif
+
+
+        @php
+            $getFirstProduct = Domain\Products\Models\Product::orderby('sort', 'asc')->first();
+            $getFirstProduct['image'] = $getFirstProduct->getMedia('image') ? $getFirstProduct->getFirstMedia('image')->getUrl() : '';
+            $getFirstProduct['responsive_image'] = $getFirstProduct->getMedia('image') ? $getFirstProduct->getFirstMedia('image')->toHtml() : '';
+        @endphp
+
+        <h1 class="font-bold font-josefin_sans text-4xl text-center w-full mt-24">FACHARBEIT DRUCKEN & BINDEN LASSEN</h1>
+        <div x-data="{
+            selectedBook: {{ $getFirstProduct }},
+            extras: {
+                mit_Leseband: false,
+                mit_Buchecken: false,
+            },
+
+            papierstärke: {
+                grams: 0,
+            },
+
+            number_of_pages: {
+                bw: 0,
+                colour: 0,
+            },
+
+            selectedSpineLettering: null,
+            step: 1,
+
+            showBookSelection: true,
+
+            text_for_book_spine_lettering: '',
+
+            selectBook(book) {
+                this.selectedBook = book;
+                console.log(this.selectedBook)
+            },
+
+            selectedSpineLetteringHandler(id) {
+                this.selectedSpineLettering = id;
+            },
+
+            continueForm(step) {
+                this.step++;
+            },
+
+            back() {
+                this.step--;
+            }
+
+        }"
+
+            class="mt-24 grid gap-5 grid-cols-1 lg:grid-cols-2 lg:p-0 lg:w-3/4 md:grid-cols-2 md:p-0 md:w-3/4 mx-auto p-4 sm:grid-cols-2 sm:p-4 xl:grid-cols-2 xl:p-0 xl:w-3/4 xs:p-4">
+            <div class="col-span-1 ">
+                <template x-if="selectedBook.hasOwnProperty('image')">
+                    <figure class="zoom" onmousemove="zoom(event)" :style="`background-image: url('${ selectedBook.image }'); background-size: 0;`"  x-html="selectedBook.responsive_image">
+                    </figure>
+                </template>
+            </div>
+            <div class="col-span-1">
+                <h3 class="lg:mt-11 md:mt-11 sm:mt-0 sm:p-0 xl:mt-11 xs:mt-0 xs:p-0 font-bold text-5xl">28,00 €</h3>
+                <p class="text-sm mt-10">inkl. 7 % MwSt. zzgl. <a href="#" class="text-blue-300">Versandkosten</a></p>
+                <p class="text-red-600 text-sm mt-10">Konfigurieren Sie erst Ihr Produkt.</p>
+                <p class="text-red-600 text-sm">Preis und Anzahl der Facharbeit wird im Warenkorb aktualisiert. </p>
+                <input type="number" class="w-20 mt-6">
+
+                <div class="p-4 ">
+                    <template  x-if="step === 1">
+                        <div class=" grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-2 grid-cols-2 gap-3">
+                            <div class="col-span-full">
+                                <p class="text-sm font-bold"><span class="text-red-600">*</span> Bindungen</p>
+                            </div>
+                            @foreach(Domain\Products\Models\Product::orderby('sort', 'asc')->get() as $product)
+
+                                @php
+                                    $product['image'] = $product->getMedia('image') ? $product->getFirstMedia('image')->getUrl() : '';
+                                    $product['responsive_image'] = $product->getMedia('image') ? $product->getFirstMedia('image')->toHtml() : '';
+                                @endphp
+
+                                <div class="col-span-1 xl:h-64 lg:h-64 md:h-64 sm:h-full xs:h-full"  x-on:click="selectBook({{ $product }})">
+                                    <img src="{{ $product->image  }}" class=" sm:w-48 xs:w-48 w-48 xl:w-full lg:w-full md:w-full" :class="[ {{ $product->id }} == selectedBook.id ? 'border border-black border-solid' : '']">
+                                    <p class="font-bold p-2.5 text-center text-sm">{{ $product->title }}</p>
+                                    <div class="relative">
+
+                                        <div class="help absolute flex" style="top: 33.6468%; left: 6.5686%; z-index: auto; cursor: help">
+                                            <p class="font-bold text-blue-300">{{ $product->price }} €</p>
+                                            <div class=" m-0 p-0 rounded-2xl help-icon transition-all">
+                                                <svg class="h-5 w-5" fill="black" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
+                                            </div>
+                                            <div class="bg-black mb-2 p-4 rounded tooltip w-max absolute opacity-0 z-10" style="bottom: 100%">
+                                                <p class="text-center text-white text-sm">{{ $product->tooltip }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </template>
+
+                    <template x-if="step === 2">
+                        <div  class=" gap-3 grid grid-cols-2 lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-2 xl:grid-cols-5 xs:grid-cols-2">
+                            <div class="col-span-full">
+                                <p class="text-sm font-bold"><span class="text-red-600">*</span> Farbe Hardcover</p>
+                            </div>
+                            <div class="col-span-1 "  x-on:click="selectBook">
+                                <img src="{{ asset('images/books/harcover-praegung-schwarz-300x300.png')  }}" class="border border-black border-solid sm:w-48 xs:w-48 w-48 xl:w-full lg:w-full md:w-full">
+                                <p class="font-bold p-2.5 text-center text-sm">Schwarz</p>
+                            </div>
+                            <div class="col-span-1 ">
+                                <img src="{{ asset('images/books/harcover-praegung-schwarz-300x300.png')  }}" class=" sm:w-48 xs:w-48 w-48 xl:w-full lg:w-full md:w-full">
+                                <p class="font-bold p-2.5 text-center text-sm">Schwarz</p>
+                            </div>
+                            <div class="col-span-1 ">
+                                <img src="{{ asset('images/books/harcover-praegung-schwarz-300x300.png')  }}" class=" sm:w-48 xs:w-48 w-48 xl:w-full lg:w-full md:w-full">
+                                <p class="font-bold p-2.5 text-center text-sm">Schwarz</p>
+                            </div>
+                            <div class="col-span-1 ">
+                                <img src="{{ asset('images/books/harcover-praegung-schwarz-300x300.png')  }}" class=" sm:w-48 xs:w-48 w-48 xl:w-full lg:w-full md:w-full">
+                                <p class="font-bold p-2.5 text-center text-sm">Schwarz</p>
+                            </div>
+                            <div class="col-span-1 ">
+                                <img src="{{ asset('images/books/harcover-praegung-schwarz-300x300.png')  }}" class=" sm:w-48 xs:w-48 w-48 xl:w-full lg:w-full md:w-full">
+                                <p class="font-bold p-2.5 text-center text-sm">Schwarz</p>
+                            </div>
+
+                            <div class="col-span-full">
+                                <p class="text-sm font-bold"><span class="text-red-600">*</span> Farbe Prägedruck</p>
+                            </div>
+                            <div class="col-span-full">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="farbe_pradgedruck" class="form-radio h-8 w-8">
+                                    <span class="ml-4 text-xl">Silber</span>
+                                </label>
+                            </div>
+
+                            <div class="col-span-full">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="farbe_pradgedruck" class="form-radio h-8 w-8">
+                                    <span class="ml-4 text-xl">Gold</span>
+                                </label>
+                            </div>
+
+                            <div class="col-span-full">
+                                <p class="text-sm font-bold"><span class="text-red-600">*</span> Buchrückenbeschriftung</p>
+                            </div>
+                            <div class="col-span-2 text-center" @click="selectedSpineLetteringHandler(1)">
+                                <img src="{{ asset('images/books/3I4A8614-e1623140702672.jpg')  }}" class=" w-full" :class="[ selectedSpineLettering == 1 ? 'border border-black border-solid' : '' ]">
+                                <p class=" p-2.5 text-center text-sm" :class="[ selectedSpineLettering == 1 ? 'font-bold' : '' ]">Mit Buchrückenbeschriftung</p>
+                                <p class="text-blue-300 text-sm " :class="[ selectedSpineLettering == 1 ? 'font-bold' : '' ]">7,00 €</p>
+                            </div>
+                            <div class="col-span-2 " @click="selectedSpineLetteringHandler(2)">
+                                <img src="{{ asset('images/books/ohne-rueckenbeschriftung-e1623140408641.png')  }}" class="w-full" :class="[ selectedSpineLettering == 2 ? 'border border-black border-solid' : '' ]">
+                                <p class=" p-2.5 text-center text-sm" :class="[ selectedSpineLettering == 2 ? 'font-bold' : '' ]">Ohne Buchrückenbeschriftung</p>
+                            </div>
+
+                            <template x-if="selectedSpineLettering">
+                                <div class="col-span-full">
+                                    <p class="text-sm font-bold"><span class="text-red-600">*</span> Farbe Buchrückenbeschriftung</p>
+                                </div>
+                            </template>
+                            <template x-if="selectedSpineLettering">
+                                <div class="col-span-full">
+                                    <label class="inline-flex items-center">
+                                        <input type="checkbox" name="farbe_buchrückenbeschriftung" class="form-checkbox rounded-full h-8 w-8">
+                                        <span class="ml-4 text-xl">Silber</span>
+                                    </label>
+                                </div>
+                            </template>
+                            <template x-if="selectedSpineLettering">
+                                <div class="col-span-full">
+                                    <label class="inline-flex items-center">
+                                        <input type="checkbox" name="farbe_buchrückenbeschriftung" class="form-checkbox rounded-full h-8 w-8">
+                                        <span class="ml-4 text-xl">Gold</span>
+                                    </label>
+                                </div>
+                            </template>
+
+
+                            <div class="col-span-full">
+                                <p class="text-sm font-bold"><span class="text-red-600">*</span> Text für Buchrückenbeschriftung</p>
+                            </div>
+                            <div class="col-span-full">
+                                <input type="text"  class="w-full bg-gray-400 p-4" x-model="text_for_book_spine_lettering">
+                                <p class="text-sm" >60 verbleibende Zeichen</p>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template x-if="step === 3">
+                        <div  class=" gap-2 grid grid-cols-3">
+                            <div class="col-span-full">
+                                <p class="text-sm font-bold"> Extras</p>
+                            </div>
+
+                            <div class="col-span-full">
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" x-model="extras.mit_Buchecken" name="farbe_buchrückenbeschriftung" class="form-checkbox rounded-full h-8 w-8">
+                                    <span class="ml-4 text-sm">mit Buchecken <span class="text-blue-300">0,00 €</span></span>
+                                </label>
+                            </div>
+                            <div class="col-span-full">
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" x-model="extras.mit_Leseband" name="farbe_buchrückenbeschriftung" class="form-checkbox rounded-full h-8 w-8">
+                                    <span class="ml-4 text-sm">mit Leseband <span class="text-blue-300">0,00 €</span></span>
+                                </label>
+                            </div>
+
+                            <template x-if="extras.mit_Buchecken">
+                                <div class="col-span-full grid grid-cols-3">
+                                    <div class="col-span-full">
+                                        <p class="text-sm font-bold"><span class="text-red-600">*</span> Buchecken Farbe</p>
+                                    </div>
+                                    <div class="col-span-1">
+                                        <div class="col-span-full">
+                                            <label class="inline-flex items-center">
+                                                <input type="radio" name="farbe_pradgedruck" class="form-radio h-8 w-8">
+                                                <span class="ml-4 text-sm">Weiß</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1">
+                                        <div class="col-span-full">
+                                            <label class="inline-flex items-center">
+                                                <input type="radio" name="farbe_pradgedruck" class="form-radio h-8 w-8">
+                                                <span class="ml-4 text-sm">Silber</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1">
+                                        <div class="col-span-full">
+                                            <label class="inline-flex items-center">
+                                                <input type="radio" name="farbe_pradgedruck" class="form-radio h-8 w-8">
+                                                <span class="ml-4 text-sm">Gold</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+
+                            <template x-if="extras.mit_Leseband">
+                                <div class="col-span-full grid grid-cols-3">
+                                    <div class="col-span-full">
+                                        <p class="text-sm font-bold"><span class="text-red-600">*</span> Leseband Farbe</p>
+                                    </div>
+                                    <div class="col-span-1">
+                                        <div class="col-span-full">
+                                            <label class="inline-flex items-center">
+                                                <input type="radio" name="leseband_farbe" class="form-radio h-8 w-8">
+                                                <span class="ml-4 text-sm">Schwarz</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1">
+                                        <div class="col-span-full">
+                                            <label class="inline-flex items-center">
+                                                <input type="radio" name="leseband_farbe" class="form-radio h-8 w-8">
+                                                <span class="ml-4 text-sm">Silber</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1">
+                                        <div class="col-span-full">
+                                            <label class="inline-flex items-center">
+                                                <input type="radio" name="leseband_farbe" class="form-radio h-8 w-8">
+                                                <span class="ml-4 text-sm">Gold</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+
+                        </div>
+
+                    </template>
+
+                    <template x-if="step === 4">
+                        <div  class=" gap-3 grid grid-cols-3">
+                            <div class="col-span-full">
+                                <p class="text-sm font-bold"><span class="text-red-600">*</span> Papierstärke</p>
+                            </div>
+
+                            <div class="col-span-1">
+                                <div class="col-span-full">
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="farbe_pradgedruck" class="form-radio h-8 w-8" value="80g" x-model="papierstärke.grams">
+                                        <span class="ml-4 text-sm">80g</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-span-1">
+                                <div class="col-span-full">
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="farbe_pradgedruck" class="form-radio h-8 w-8" value="100g" x-model="papierstärke.grams">
+                                        <span class="ml-4 text-sm">100g</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-span-1">
+                                <div class="col-span-full">
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="farbe_pradgedruck" class="form-radio h-8 w-8" value="120g" x-model="papierstärke.grams">
+                                        <span class="ml-4 text-sm">120g</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <template x-if="papierstärke.grams != 0">
+                                <div class="col-span-full grid grid-cols-1">
+                                    <div class="col-span-full">
+                                        <p class="text-sm font-bold"><span class="text-red-600">*</span> Seitenanzahl S/W</p>
+                                        <span x-text="number_of_pages.bw"></span>
+                                        <input id="seitenanzahl-sw" type="range" value="0" x-model="number_of_pages.bw" class="mb-6 w-96 h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer range-sm dark:bg-gray-700">
+                                        <p class="text-blue-300 text-sm">0,00 € </p>
+                                    </div>
+                                    <div class="col-span-full">
+                                        <p class="text-sm font-bold"><span class="text-red-600">*</span> Seitenanzahl Farbig</p>
+                                        <span x-text="number_of_pages.colour"></span>
+                                        <input id="seitenanzahl-farbig" type="range" value="0" x-model="number_of_pages.colour"  class="mb-6 w-96 h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer range-sm dark:bg-gray-700">
+                                        <p class="text-blue-300 text-sm">0,00 € </p>
+                                    </div>
+                                </div>
+                            </template>
+
+                            <div class="col-span-full">
+                                <p class="text-sm font-bold"><span class="text-red-600">*</span> Einseitiger / Doppelseitiger Druck</p>
+                            </div>
+                            <div class="col-span-full">
+                                <div class="col-span-full">
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="Einseitiger" class="form-radio h-8 w-8">
+                                        <span class="ml-4 text-sm">Einseitig</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-span-full">
+                                <div class="col-span-full">
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="Einseitiger" class="form-radio h-8 w-8">
+                                        <span class="ml-4 text-sm">Doppelseitig</span>
+                                        <div class="help absolute flex" style="right: 37%; z-index: auto; cursor: help">
+                                            <div class=" m-0 p-0 rounded-2xl help-icon transition-all">
+                                                <svg class="h-5 w-5" fill="black" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
+                                            </div>
+                                            <div class="bg-black mb-2 p-4 rounded tooltip w-max absolute opacity-0 z-10 w-96" style="bottom: 100%; right: -500%">
+                                                <p class="text-center text-white text-sm">Bitte achten Sie bei doppelseitigem Druck auf die Anordnung der Seitenzahlen!</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template x-if="step === 5">
+                        <div  class=" gap-2 grid grid-cols-1">
+                            <div class="col-span-full">
+                                <p class="text-sm font-bold"><span class="text-red-600">*</span> Upload Facharbeit</p>
+                            </div>
+
+                            <div class="col-span-1">
+                                <input type="file">
+                                <p class="text-sm">(maximale Dateigröße 100 MB)</p>
+                            </div>
+                            <div class="col-span-full">
+                                <p class="text-sm font-bold text-red-600">* Upload Cover für Bindung (nur in Word Datei und in schwarz/weiß)</p>
+                            </div>
+
+                            <div class="col-span-1">
+                                <input type="file">
+                                <p class="text-sm">(maximale Dateigröße 100 MB)</p>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template x-if="step === 6">
+                        <div  class=" gap-2 grid grid-cols-1">
+                            <div class="col-span-full">
+                                <p class="text-sm font-bold"><span class="text-red-600">*</span> Auswahl für CD</p>
+                            </div>
+                            <div class="col-span-full">
+                                <p class="text-sm font-bold">Hinweis: Anzahl der Druck Produkte entspricht Anzahl der CDs!</p>
+                            </div>
+
+                            <div class="col-span-1">
+                                <div class="col-span-full">
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="cd" class="form-radio h-8 w-8">
+                                        <span class="ml-4 text-sm">CD brennen mit Labeldruck <span class="text-blue-300">3,50 €</span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-span-1">
+                                <div class="col-span-full">
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="cd" class="form-radio h-8 w-8">
+                                        <span class="ml-4 text-sm">keine CD brennen</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-span-full">
+                                <p class="text-sm font-bold">Klebehülle</p>
+                            </div>
+                            <div class="col-span-full">
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="adhesive_sleeve" class="form-checkbox rounded-full h-8 w-8">
+                                    <span class="ml-4 text-sm">Klebehülle für CD <span class="text-blue-300">1,50 €</span></span>
+                                </label>
+                            </div>
+                            <div class="col-span-full">
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="adhesive_sleeve" class="form-checkbox rounded-full h-8 w-8">
+                                    <span class="ml-4 text-sm">Klebehülle für USB <span class="text-blue-300">1,50 €</span></span>
+                                </label>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template x-if="step === 7">
+                        <div class="grid gap-5 grid-cols-1">
+                            <div class="col-span-full">
+                                <label class="font-bold text-4xl">
+                                    Ihr Produkt ist nun fertig. Bitte klicken Sie nun auf Bestellen!
+                                </label>
+                            </div>
+                            <div class="col-span-full">
+                                <label class="font-bold">
+                                    Hinweis: Farbabweichungen beim Druck möglich!
+                                </label>
+                            </div>
+                            <div class="col-span-full">
+                                <p class="text-sm font-bold"><span class="text-red-600">*</span> Telefonnummer für Rückfragen</p>
+                            </div>
+
+                            <div class="col-span-full">
+                                <input type="text"  class="w-full bg-gray-400 p-3" placeholder="Telefonnummer eingeben">
+                            </div>
+                        </div>
+                    </template>
+                </div>
+
+                <div class="sm:mt-5 xs:mt-5 md:mt-0 lg:mt-0 xl:mt-0 mt-5">
+                    <template  x-if="step > 1">
+                        <button @click="back()" class="font-josefin_sans bg-blue-500 font-bold hover:bg-black inline-flex items-center px-4 py-2 rounded-full text-white w-36 justify-center">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd"></path></svg>
+                            <span>Zurück</span>
+                        </button>
+                    </template>
+
+                    <template  x-if="step < 7">
+                        <button @click="continueForm()" class="font-josefin_sans bg-blue-500 font-bold hover:bg-black inline-flex items-center px-4 py-2 rounded-full text-white w-36 justify-center">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
+                            <span>Weiter</span>
+                        </button>
+                    </template>
+                </div>
+
+                <div class="mt-12">
+                    <p class="font-bold text-sm">Gesamtsumme </p>
+                    <p class="text-blue-300 text-2xl">0,00 € </p>
+                </div>
+
+                <div class="mt-3">
+
+                    <button @click="continueForm()" class="font-josefin_sans bg-blue-500 font-bold hover:bg-black inline-flex items-center px-4 py-2 rounded-full text-white w-36 justify-center">
+                        <span>Bestellen</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-black border-t lg:w-3/4 mb-12 md:w-3/4 mt-12 mx-auto xl:w-3/4">
+            <div class="mt-24">
+                <p class="font-bold text-2xl">
+                    HAUS-, FACH-, SEMINAR, MASTER- & BACHELORARBEIT DRUCKEN UND BINDEN LASSEN IN VERSCHIEDENEN AUSFÜHRUNGEN UND ZUM GÜNSTIGEN PREIS IM SBG COPYSHOP AUGSBURG
+                </p>
+                <p class="mt-5">
+                    Sie haben viel Aufwand und Wissen in Ihre Haus-, Fach- und Seminararbeit gesteckt und mit Ihrer Bachelor-und Masterarbeit den überzeugende Nachweis Ihrer wissenschaftlichen Fähigkeiten vorgelegt. Jetzt sollen diese schriftlichen Arbeiten auch in gedruckter Form den bestmöglichen Eindruck hinterlassen – und das zu geringen Kosten.
+                </p>
+                <p class="mt-5">
+                    Unser Online-Konfigurator bietet zu einem günstigen Preis die ganze Bandbreite an Möglichkeiten für den Druck und die hochwertige Bindung von wissenschaftlichen Arbeiten an, von der ersten Hausarbeit bis zur Promotion. Schritt für Schritt werden Sie durch den Bestellprozess mit seinen vielfältigen Auswahlmöglichkeiten geführt, dabei haben Sie jederzeit den genauen Überblick über die Kosten.
+                </p>
+                <p class="mt-5">
+                    Sie können zwischen Hard- und Softcover wählen, mit oder ohne Prägedruck. Bei den Bindungen beginnt die Auswahl bei Spiralbindungen und Drahspiralbindungen Haus-, Fach- und Seminararbeiten und geht dann über zur Heiß- oder Kaltleimbindung, ja nach Umfang des Manuskripts. Bei den Umschlagfarben können Sie zwischen Schwarz, Blau, Grün, Bordeaux und Grau wählen, wahlweise mit Rückenbeschriftung, Buchecken und Leseband. Papier wird in Stärken von 80, 100 und 120 Gramm angeboten, das einseitig oder doppelseitig bedruckt werden kann.
+                </p>
+                <p class="mt-5">
+                    Sind das Manuskript und der Umschlag erst einmal hochgeladen, drucken moderne, leistungsfähige Druckmaschinen Ihre Haus-, Fach-, Seminar- und Abschlussarbeiten. Diese werden in den weiteren Arbeitsschritten von qualifizierten und erfahrenen Mitarbeitern gebunden und in die perfekte Form gebracht. Damit am Ende Ihre wissenschaftliche Arbeit in einer hochwertigen und angemessenen Form präsentiert werden kann.
+                </p>
+            </div>
+
+        </div>
+
+        @if(config('cms.footer'))
+            <x-dynamic-component component="{{  config('cms.footer') }}" :footer-navigation="$footerNavigation"/>
+        @endif
+    </main>
+
+    @pushonce('scripts')
+        <script>
+            function zoom(e){
+                var zoomer = e.currentTarget;
+                e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+                e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
+                x = offsetX/zoomer.offsetWidth*100
+                y = offsetY/zoomer.offsetHeight*100
+                zoomer.style.backgroundPosition = x + '% ' + y + '%';
+            }
+        </script>
+    @endpushonce
+@endsection
