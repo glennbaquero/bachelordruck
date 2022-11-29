@@ -38,7 +38,7 @@ jobs:
 
 #      - name: Get Changes in assets
 #        id: changed_assets
-#        uses: tj-actions/changed-files@v18.7
+#        uses: tj-actions/changed-files@v26.1
 #        with:
 #          files: |
 #            package.json
@@ -47,7 +47,7 @@ jobs:
 
       - name: Get version change
         id: changed_version
-        uses: tj-actions/changed-files@v18.7
+        uses: tj-actions/changed-files@v26.1
         with:
           files: |
             config/app.php
